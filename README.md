@@ -34,7 +34,7 @@ The project automates workflows on the [Demo Webshop](https://demowebshop.tricen
 - Logout
 
 📊 Reports
-After execution, reports and logs will be available in the reports/ folder.
+After execution, reports and logs will be available in the results/ folder.
 
 
 
