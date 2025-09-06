@@ -22,7 +22,8 @@ The project automates workflows on the [Demo Webshop](https://demowebshop.tricen
 │── resources/ # Custom keywords & variable files
 │── reports/ # Execution logs and reports
 │── docs/ # test case documententation
-│── README.md # Project documentation ```
+│── README.md # Project documentation
+```
 
 
 ✅ Test Scenarios
