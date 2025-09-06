@@ -17,12 +17,13 @@ The project automates workflows on the [Demo Webshop](https://demowebshop.tricen
 - **Excel** ( test cases)
 
 ## 📂 Project Structure
-robotframework-ecommerce/
+```robotframework-ecommerce/
 │── tests/ # Robot Framework test suite files
 │── resources/ # Custom keywords & variable files
 │── reports/ # Execution logs and reports
 │── docs/ # test case documententation
-│── README.md # Project documentation
+│── README.md # Project documentation ```
+
 
 ✅ Test Scenarios
 - Login with valid and invalid credentials
