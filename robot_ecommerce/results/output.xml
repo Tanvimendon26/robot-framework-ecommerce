@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-09-06T00:52:46.467819" rpa="false" schemaversion="5">
+<suite id="s1" name="Ecommerce Tests" source="C:\Users\tanvi\OneDrive\Desktop\robot_ecommerce\tests\ecommerce_tests.robot">
+<kw name="Open Browser To Demo WebShop" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:52:46.920949" level="INFO">Opening browser 'Chrome' to base url 'https://demowebshop.tricentis.com/'.</msg>
+<arg>https://demowebshop.tricentis.com/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-09-06T00:52:46.920746" elapsed="5.638121"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-09-06T00:52:52.559150" elapsed="0.034086"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-09-06T00:52:52.593457" elapsed="0.000439"/>
+</kw>
+<status status="PASS" start="2025-09-06T00:52:46.920192" elapsed="5.673837"/>
+</kw>
+<test id="s1-t1" name="TC001 Login" line="14">
+<kw name="Login" owner="keywords">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:52:52.598557" level="INFO">Clicking link 'Log in'.</msg>
+<arg>Log in</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-06T00:52:52.595195" elapsed="2.167939"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:52:54.764642" level="INFO">Typing text 'testuser@example.com' into text field 'id=Email'.</msg>
+<arg>id=Email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-06T00:52:54.763801" elapsed="1.669843"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:52:56.434960" level="INFO">Typing text 'Test@123' into text field 'id=Password'.</msg>
+<arg>id=Password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-06T00:52:56.434225" elapsed="1.643960"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:52:58.080889" level="INFO">Clicking button 'css=input[value="Log in"]'.</msg>
+<arg>css=input[value="Log in"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-06T00:52:58.080206" elapsed="2.082352"/>
+</kw>
+<arg>${VALID_EMAIL}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<status status="PASS" start="2025-09-06T00:52:52.594776" elapsed="7.568109"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:53:01.180638" level="INFO">Current page contains text 'My account'.</msg>
+<arg>My account</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-09-06T00:53:00.163397" elapsed="1.017602"/>
+</kw>
+<kw name="Logout" owner="keywords">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:53:01.183484" level="INFO">Clicking link 'Log out'.</msg>
+<msg time="2025-09-06T00:53:02.861306" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-06T00:53:02.862478" level="FAIL">Link with locator 'Log out' not found.</msg>
+<arg>Log out</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="FAIL" start="2025-09-06T00:53:01.183150" elapsed="1.691308">Link with locator 'Log out' not found.</status>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Register</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-09-06T00:53:02.875062" elapsed="0.000116"/>
+</kw>
+<status status="FAIL" start="2025-09-06T00:53:01.182300" elapsed="1.693538">Link with locator 'Log out' not found.</status>
+</kw>
+<status status="FAIL" start="2025-09-06T00:52:52.594139" elapsed="10.283260">Link with locator 'Log out' not found.</status>
+</test>
+<test id="s1-t2" name="TC002 Invalid Login" line="19">
+<kw name="Login" owner="keywords">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:53:02.884848" level="INFO">Clicking link 'Log in'.</msg>
+<arg>Log in</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-06T00:53:02.884277" elapsed="2.082916"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:53:04.968694" level="INFO">Typing text 'invalid@example.com' into text field 'id=Email'.</msg>
+<arg>id=Email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-06T00:53:04.967823" elapsed="1.623915"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:53:06.593175" level="INFO">Typing text 'wrongpass' into text field 'id=Password'.</msg>
+<arg>id=Password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-06T00:53:06.592321" elapsed="1.686339"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:53:08.280078" level="INFO">Clicking button 'css=input[value="Log in"]'.</msg>
+<arg>css=input[value="Log in"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-06T00:53:08.279407" elapsed="1.630091"/>
+</kw>
+<arg>invalid@example.com</arg>
+<arg>wrongpass</arg>
+<status status="PASS" start="2025-09-06T00:53:02.883386" elapsed="7.026588"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:53:10.997272" level="INFO">Current page contains text 'Login was unsuccessful'.</msg>
+<arg>Login was unsuccessful</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-09-06T00:53:09.912519" elapsed="1.085204"/>
+</kw>
+<status status="PASS" start="2025-09-06T00:53:02.882182" elapsed="8.116559"/>
+</test>
+<test id="s1-t3" name="TC003 Browse Products" line="23">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:53:11.007769" level="INFO">Clicking link 'Books'.</msg>
+<arg>Books</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-06T00:53:11.006897" elapsed="2.599710"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:53:14.640419" level="INFO">Current page contains text 'Books'.</msg>
+<arg>Books</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-09-06T00:53:13.607883" elapsed="1.032680"/>
+</kw>
+<status status="PASS" start="2025-09-06T00:53:11.005273" elapsed="3.637483"/>
+</test>
+<test id="s1-t4" name="TC004 Add Product To Cart" line="27">
+<kw name="Add Product To Cart" owner="keywords">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:53:14.654878" level="INFO">Clicking link 'Computing and Internet'.</msg>
+<arg>${product_name}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-06T00:53:14.654083" elapsed="2.576511"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:53:17.232203" level="INFO">Clicking button 'css=input[value="Add to cart"]'.</msg>
+<arg>css=input[value="Add to cart"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-06T00:53:17.231320" elapsed="4.225276"/>
+</kw>
+<arg>${PRODUCT_NAME}</arg>
+<status status="PASS" start="2025-09-06T00:53:14.650805" elapsed="6.806270"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:53:22.479601" level="INFO">Current page contains text 'The product has been added'.</msg>
+<arg>The product has been added</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-09-06T00:53:21.458075" elapsed="1.022578"/>
+</kw>
+<status status="PASS" start="2025-09-06T00:53:14.647358" elapsed="7.835899"/>
+</test>
+<test id="s1-t5" name="TC005 Remove Product From Cart" line="31">
+<kw name="Add Product To Cart" owner="keywords">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:53:22.488762" level="INFO">Clicking link 'Computing and Internet'.</msg>
+<msg time="2025-09-06T00:53:24.209292" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-06T00:53:24.209483" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=140.0.7339.81); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff68445fca5+79861]
+	GetHandleVerifier [0x0x7ff68445fd00+79952]
+	(No symbol) [0x0x7ff6841dc8fc]
+	(No symbol) [0x0x7ff6842359c3]
+	(No symbol) [0x0x7ff684227338]
+	(No symbol) [0x0x7ff68425cada]
+	(No symbol) [0x0x7ff684226bc6]
+	(No symbol) [0x0x7ff68425ccf0]
+	(No symbol) [0x0x7ff684284f8b]
+	(No symbol) [0x0x7ff68425c8b3]
+	(No symbol) [0x0x7ff684225272]
+	(No symbol) [0x0x7ff684226043]
+	GetHandleVerifier [0x0x7ff68471b9dd+2946349]
+	GetHandleVerifier [0x0x7ff684715c5a+2922410]
+	GetHandleVerifier [0x0x7ff6847359e7+3052855]
+	GetHandleVerifier [0x0x7ff68447aa8e+189918]
+	GetHandleVerifier [0x0x7ff684482a2f+222591]
+	GetHandleVerifier [0x0x7ff684468ac4+116244]
+	GetHandleVerifier [0x0x7ff684468c79+116681]
+	GetHandleVerifier [0x0x7ff68444f058+11176]
+	BaseThreadInitThunk [0x0x7ffabeffe8d7+23]
+	RtlUserThreadStart [0x0x7ffac02e8d9c+44]
+</msg>
+<arg>${product_name}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="FAIL" start="2025-09-06T00:53:22.488128" elapsed="1.730291">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=140.0.7339.81); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff68445fca5+79861]
+	GetHandleVerifier [0x0x7ff68445fd00+79952]
+	(No symbol) [0x0x7ff6841dc8fc]
+	(No symbol) [0x0x7ff6842359c3]
+	(No symbol) [0x0x7ff684227338]
+	(No symbol) [0x0x7ff68425cada]
+	(No symbol) [0x0x7ff684226bc6]
+	(No symbol) [0x0x7ff68425ccf0]
+	(No symbol) [0x0x7ff684284f8b]
+	(No symbol) [0x0x7ff68425c8b3]
+	(No symbol) [0x0x7ff684225272]
+	(No symbol) [0x0x7ff684226043]
+	GetHandleVerifier [0x0x7ff68471b9dd+2946349]
+	GetHandleVerifier [0x0x7ff684715c5a+2922410]
+	GetHandleVerifier [0x0x7ff6847359e7+3052855]
+	GetHandleVerifier [0x0x7ff68447aa8e+189918]
+	GetHandleVerifier [0x0x7ff684482a2f+222591]
+	GetHandleVerifier [0x0x7ff684468ac4+116244]
+	GetHandleVerifier [0x0x7ff684468c79+116681]
+	GetHandleVerifier [0x0x7ff68444f058+11176]
+	BaseThreadInitThunk [0x0x7ffabeffe8d7+23]
+	RtlUserThreadStart [0x0x7ffac02e8d9c+44]
+</status>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>css=input[value="Add to cart"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-09-06T00:53:24.218981" elapsed="0.000103"/>
+</kw>
+<arg>${PRODUCT_NAME}</arg>
+<status status="FAIL" start="2025-09-06T00:53:22.487475" elapsed="1.731998">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=140.0.7339.81); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff68445fca5+79861]
+	GetHandleVerifier [0x0x7ff68445fd00+79952]
+	(No symbol) [0x0x7ff6841dc8fc]
+	(No symbol) [0x0x7ff6842359c3]
+	(No symbol) [0x0x7ff684227338]
+	(No symbol) [0x0x7ff68425cada]
+	(No symbol) [0x0x7ff684226bc6]
+	(No symbol) [0x0x7ff68425ccf0]
+	(No symbol) [0x0x7ff684284f8b]
+	(No symbol) [0x0x7ff68425c8b3]
+	(No symbol) [0x0x7ff684225272]
+	(No symbol) [0x0x7ff684226043]
+	GetHandleVerifier [0x0x7ff68471b9dd+2946349]
+	GetHandleVerifier [0x0x7ff684715c5a+2922410]
+	GetHandleVerifier [0x0x7ff6847359e7+3052855]
+	GetHandleVerifier [0x0x7ff68447aa8e+189918]
+	GetHandleVerifier [0x0x7ff684482a2f+222591]
+	GetHandleVerifier [0x0x7ff684468ac4+116244]
+	GetHandleVerifier [0x0x7ff684468c79+116681]
+	GetHandleVerifier [0x0x7ff68444f058+11176]
+	BaseThreadInitThunk [0x0x7ffabeffe8d7+23]
+	RtlUserThreadStart [0x0x7ffac02e8d9c+44]
+</status>
+</kw>
+<kw name="Remove Product From Cart" owner="keywords">
+<arg>${PRODUCT_NAME}</arg>
+<status status="NOT RUN" start="2025-09-06T00:53:24.220533" elapsed="0.000100"/>
+</kw>
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<arg>${PRODUCT_NAME}</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="NOT RUN" start="2025-09-06T00:53:24.221047" elapsed="0.000113"/>
+</kw>
+<status status="FAIL" start="2025-09-06T00:53:22.485211" elapsed="1.736702">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=140.0.7339.81); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff68445fca5+79861]
+	GetHandleVerifier [0x0x7ff68445fd00+79952]
+	(No symbol) [0x0x7ff6841dc8fc]
+	(No symbol) [0x0x7ff6842359c3]
+	(No symbol) [0x0x7ff684227338]
+	(No symbol) [0x0x7ff68425cada]
+	(No symbol) [0x0x7ff684226bc6]
+	(No symbol) [0x0x7ff68425ccf0]
+	(No symbol) [0x0x7ff684284f8b]
+	(No symbol) [0x0x7ff68425c8b3]
+	(No symbol) [0x0x7ff684225272]
+	(No symbol) [0x0x7ff684226043]
+	GetHandleVerifier [0x0x7ff68471b9dd+2946349]
+	GetHandleVerifier [0x0x7ff684715c5a+2922410]
+	GetHandleVerifier [0x0x7ff6847359e7+3052855]
+	GetHandleVerifier [0x0x7ff68447aa8e+189918]
+	GetHandleVerifier [0x0x7ff684482a2f+222591]
+	GetHandleVerifier [0x0x7ff684468ac4+116244]
+	GetHandleVerifier [0x0x7ff684468c79+116681]
+	GetHandleVerifier [0x0x7ff68444f058+11176]
+	BaseThreadInitThunk [0x0x7ffabeffe8d7+23]
+	RtlUserThreadStart [0x0x7ffac02e8d9c+44]
+</status>
+</test>
+<test id="s1-t6" name="TC006 Update Quantity In Cart" line="36">
+<kw name="Add Product To Cart" owner="keywords">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:53:24.227790" level="INFO">Clicking link 'Computing and Internet'.</msg>
+<msg time="2025-09-06T00:53:26.065591" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-06T00:53:26.065855" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=140.0.7339.81); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff68445fca5+79861]
+	GetHandleVerifier [0x0x7ff68445fd00+79952]
+	(No symbol) [0x0x7ff6841dc8fc]
+	(No symbol) [0x0x7ff6842359c3]
+	(No symbol) [0x0x7ff684227338]
+	(No symbol) [0x0x7ff68425cada]
+	(No symbol) [0x0x7ff684226bc6]
+	(No symbol) [0x0x7ff68425ccf0]
+	(No symbol) [0x0x7ff684284f8b]
+	(No symbol) [0x0x7ff68425c8b3]
+	(No symbol) [0x0x7ff684225272]
+	(No symbol) [0x0x7ff684226043]
+	GetHandleVerifier [0x0x7ff68471b9dd+2946349]
+	GetHandleVerifier [0x0x7ff684715c5a+2922410]
+	GetHandleVerifier [0x0x7ff6847359e7+3052855]
+	GetHandleVerifier [0x0x7ff68447aa8e+189918]
+	GetHandleVerifier [0x0x7ff684482a2f+222591]
+	GetHandleVerifier [0x0x7ff684468ac4+116244]
+	GetHandleVerifier [0x0x7ff684468c79+116681]
+	GetHandleVerifier [0x0x7ff68444f058+11176]
+	BaseThreadInitThunk [0x0x7ffabeffe8d7+23]
+	RtlUserThreadStart [0x0x7ffac02e8d9c+44]
+</msg>
+<arg>${product_name}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="FAIL" start="2025-09-06T00:53:24.226958" elapsed="1.845037">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=140.0.7339.81); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff68445fca5+79861]
+	GetHandleVerifier [0x0x7ff68445fd00+79952]
+	(No symbol) [0x0x7ff6841dc8fc]
+	(No symbol) [0x0x7ff6842359c3]
+	(No symbol) [0x0x7ff684227338]
+	(No symbol) [0x0x7ff68425cada]
+	(No symbol) [0x0x7ff684226bc6]
+	(No symbol) [0x0x7ff68425ccf0]
+	(No symbol) [0x0x7ff684284f8b]
+	(No symbol) [0x0x7ff68425c8b3]
+	(No symbol) [0x0x7ff684225272]
+	(No symbol) [0x0x7ff684226043]
+	GetHandleVerifier [0x0x7ff68471b9dd+2946349]
+	GetHandleVerifier [0x0x7ff684715c5a+2922410]
+	GetHandleVerifier [0x0x7ff6847359e7+3052855]
+	GetHandleVerifier [0x0x7ff68447aa8e+189918]
+	GetHandleVerifier [0x0x7ff684482a2f+222591]
+	GetHandleVerifier [0x0x7ff684468ac4+116244]
+	GetHandleVerifier [0x0x7ff684468c79+116681]
+	GetHandleVerifier [0x0x7ff68444f058+11176]
+	BaseThreadInitThunk [0x0x7ffabeffe8d7+23]
+	RtlUserThreadStart [0x0x7ffac02e8d9c+44]
+</status>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>css=input[value="Add to cart"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-09-06T00:53:26.072553" elapsed="0.000048"/>
+</kw>
+<arg>${PRODUCT_NAME}</arg>
+<status status="FAIL" start="2025-09-06T00:53:24.226108" elapsed="1.847146">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=140.0.7339.81); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff68445fca5+79861]
+	GetHandleVerifier [0x0x7ff68445fd00+79952]
+	(No symbol) [0x0x7ff6841dc8fc]
+	(No symbol) [0x0x7ff6842359c3]
+	(No symbol) [0x0x7ff684227338]
+	(No symbol) [0x0x7ff68425cada]
+	(No symbol) [0x0x7ff684226bc6]
+	(No symbol) [0x0x7ff68425ccf0]
+	(No symbol) [0x0x7ff684284f8b]
+	(No symbol) [0x0x7ff68425c8b3]
+	(No symbol) [0x0x7ff684225272]
+	(No symbol) [0x0x7ff684226043]
+	GetHandleVerifier [0x0x7ff68471b9dd+2946349]
+	GetHandleVerifier [0x0x7ff684715c5a+2922410]
+	GetHandleVerifier [0x0x7ff6847359e7+3052855]
+	GetHandleVerifier [0x0x7ff68447aa8e+189918]
+	GetHandleVerifier [0x0x7ff684482a2f+222591]
+	GetHandleVerifier [0x0x7ff684468ac4+116244]
+	GetHandleVerifier [0x0x7ff684468c79+116681]
+	GetHandleVerifier [0x0x7ff68444f058+11176]
+	BaseThreadInitThunk [0x0x7ffabeffe8d7+23]
+	RtlUserThreadStart [0x0x7ffac02e8d9c+44]
+</status>
+</kw>
+<kw name="Update Quantity In Cart" owner="keywords">
+<arg>${PRODUCT_NAME}</arg>
+<arg>2</arg>
+<status status="NOT RUN" start="2025-09-06T00:53:26.074017" elapsed="0.000054"/>
+</kw>
+<status status="FAIL" start="2025-09-06T00:53:24.224834" elapsed="1.849524">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=140.0.7339.81); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff68445fca5+79861]
+	GetHandleVerifier [0x0x7ff68445fd00+79952]
+	(No symbol) [0x0x7ff6841dc8fc]
+	(No symbol) [0x0x7ff6842359c3]
+	(No symbol) [0x0x7ff684227338]
+	(No symbol) [0x0x7ff68425cada]
+	(No symbol) [0x0x7ff684226bc6]
+	(No symbol) [0x0x7ff68425ccf0]
+	(No symbol) [0x0x7ff684284f8b]
+	(No symbol) [0x0x7ff68425c8b3]
+	(No symbol) [0x0x7ff684225272]
+	(No symbol) [0x0x7ff684226043]
+	GetHandleVerifier [0x0x7ff68471b9dd+2946349]
+	GetHandleVerifier [0x0x7ff684715c5a+2922410]
+	GetHandleVerifier [0x0x7ff6847359e7+3052855]
+	GetHandleVerifier [0x0x7ff68447aa8e+189918]
+	GetHandleVerifier [0x0x7ff684482a2f+222591]
+	GetHandleVerifier [0x0x7ff684468ac4+116244]
+	GetHandleVerifier [0x0x7ff684468c79+116681]
+	GetHandleVerifier [0x0x7ff68444f058+11176]
+	BaseThreadInitThunk [0x0x7ffabeffe8d7+23]
+	RtlUserThreadStart [0x0x7ffac02e8d9c+44]
+</status>
+</test>
+<test id="s1-t7" name="TC007 Checkout Process" line="41">
+<kw name="Add Product To Cart" owner="keywords">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:53:26.080019" level="INFO">Clicking link 'Computing and Internet'.</msg>
+<msg time="2025-09-06T00:53:27.794266" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-06T00:53:27.798608" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=140.0.7339.81); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff68445fca5+79861]
+	GetHandleVerifier [0x0x7ff68445fd00+79952]
+	(No symbol) [0x0x7ff6841dc8fc]
+	(No symbol) [0x0x7ff6842359c3]
+	(No symbol) [0x0x7ff684227338]
+	(No symbol) [0x0x7ff68425cada]
+	(No symbol) [0x0x7ff684226bc6]
+	(No symbol) [0x0x7ff68425ccf0]
+	(No symbol) [0x0x7ff684284f8b]
+	(No symbol) [0x0x7ff68425c8b3]
+	(No symbol) [0x0x7ff684225272]
+	(No symbol) [0x0x7ff684226043]
+	GetHandleVerifier [0x0x7ff68471b9dd+2946349]
+	GetHandleVerifier [0x0x7ff684715c5a+2922410]
+	GetHandleVerifier [0x0x7ff6847359e7+3052855]
+	GetHandleVerifier [0x0x7ff68447aa8e+189918]
+	GetHandleVerifier [0x0x7ff684482a2f+222591]
+	GetHandleVerifier [0x0x7ff684468ac4+116244]
+	GetHandleVerifier [0x0x7ff684468c79+116681]
+	GetHandleVerifier [0x0x7ff68444f058+11176]
+	BaseThreadInitThunk [0x0x7ffabeffe8d7+23]
+	RtlUserThreadStart [0x0x7ffac02e8d9c+44]
+</msg>
+<arg>${product_name}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="FAIL" start="2025-09-06T00:53:26.079478" elapsed="1.728668">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=140.0.7339.81); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff68445fca5+79861]
+	GetHandleVerifier [0x0x7ff68445fd00+79952]
+	(No symbol) [0x0x7ff6841dc8fc]
+	(No symbol) [0x0x7ff6842359c3]
+	(No symbol) [0x0x7ff684227338]
+	(No symbol) [0x0x7ff68425cada]
+	(No symbol) [0x0x7ff684226bc6]
+	(No symbol) [0x0x7ff68425ccf0]
+	(No symbol) [0x0x7ff684284f8b]
+	(No symbol) [0x0x7ff68425c8b3]
+	(No symbol) [0x0x7ff684225272]
+	(No symbol) [0x0x7ff684226043]
+	GetHandleVerifier [0x0x7ff68471b9dd+2946349]
+	GetHandleVerifier [0x0x7ff684715c5a+2922410]
+	GetHandleVerifier [0x0x7ff6847359e7+3052855]
+	GetHandleVerifier [0x0x7ff68447aa8e+189918]
+	GetHandleVerifier [0x0x7ff684482a2f+222591]
+	GetHandleVerifier [0x0x7ff684468ac4+116244]
+	GetHandleVerifier [0x0x7ff684468c79+116681]
+	GetHandleVerifier [0x0x7ff68444f058+11176]
+	BaseThreadInitThunk [0x0x7ffabeffe8d7+23]
+	RtlUserThreadStart [0x0x7ffac02e8d9c+44]
+</status>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>css=input[value="Add to cart"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-09-06T00:53:27.808900" elapsed="0.000166"/>
+</kw>
+<arg>${PRODUCT_NAME}</arg>
+<status status="FAIL" start="2025-09-06T00:53:26.078490" elapsed="1.731674">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=140.0.7339.81); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff68445fca5+79861]
+	GetHandleVerifier [0x0x7ff68445fd00+79952]
+	(No symbol) [0x0x7ff6841dc8fc]
+	(No symbol) [0x0x7ff6842359c3]
+	(No symbol) [0x0x7ff684227338]
+	(No symbol) [0x0x7ff68425cada]
+	(No symbol) [0x0x7ff684226bc6]
+	(No symbol) [0x0x7ff68425ccf0]
+	(No symbol) [0x0x7ff684284f8b]
+	(No symbol) [0x0x7ff68425c8b3]
+	(No symbol) [0x0x7ff684225272]
+	(No symbol) [0x0x7ff684226043]
+	GetHandleVerifier [0x0x7ff68471b9dd+2946349]
+	GetHandleVerifier [0x0x7ff684715c5a+2922410]
+	GetHandleVerifier [0x0x7ff6847359e7+3052855]
+	GetHandleVerifier [0x0x7ff68447aa8e+189918]
+	GetHandleVerifier [0x0x7ff684482a2f+222591]
+	GetHandleVerifier [0x0x7ff684468ac4+116244]
+	GetHandleVerifier [0x0x7ff684468c79+116681]
+	GetHandleVerifier [0x0x7ff68444f058+11176]
+	BaseThreadInitThunk [0x0x7ffabeffe8d7+23]
+	RtlUserThreadStart [0x0x7ffac02e8d9c+44]
+</status>
+</kw>
+<kw name="Proceed To Checkout" owner="keywords">
+<status status="NOT RUN" start="2025-09-06T00:53:27.813767" elapsed="0.000219"/>
+</kw>
+<status status="FAIL" start="2025-09-06T00:53:26.076049" elapsed="1.738873">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=140.0.7339.81); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff68445fca5+79861]
+	GetHandleVerifier [0x0x7ff68445fd00+79952]
+	(No symbol) [0x0x7ff6841dc8fc]
+	(No symbol) [0x0x7ff6842359c3]
+	(No symbol) [0x0x7ff684227338]
+	(No symbol) [0x0x7ff68425cada]
+	(No symbol) [0x0x7ff684226bc6]
+	(No symbol) [0x0x7ff68425ccf0]
+	(No symbol) [0x0x7ff684284f8b]
+	(No symbol) [0x0x7ff68425c8b3]
+	(No symbol) [0x0x7ff684225272]
+	(No symbol) [0x0x7ff684226043]
+	GetHandleVerifier [0x0x7ff68471b9dd+2946349]
+	GetHandleVerifier [0x0x7ff684715c5a+2922410]
+	GetHandleVerifier [0x0x7ff6847359e7+3052855]
+	GetHandleVerifier [0x0x7ff68447aa8e+189918]
+	GetHandleVerifier [0x0x7ff684482a2f+222591]
+	GetHandleVerifier [0x0x7ff684468ac4+116244]
+	GetHandleVerifier [0x0x7ff684468c79+116681]
+	GetHandleVerifier [0x0x7ff68444f058+11176]
+	BaseThreadInitThunk [0x0x7ffabeffe8d7+23]
+	RtlUserThreadStart [0x0x7ffac02e8d9c+44]
+</status>
+</test>
+<test id="s1-t8" name="TC008 Logout" line="45">
+<kw name="Login" owner="keywords">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:53:27.832015" level="INFO">Clicking link 'Log in'.</msg>
+<arg>Log in</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-06T00:53:27.824421" elapsed="2.181245"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:53:30.007084" level="INFO">Typing text 'testuser@example.com' into text field 'id=Email'.</msg>
+<arg>id=Email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-06T00:53:30.006132" elapsed="1.689735"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:53:31.697858" level="INFO">Typing text 'Test@123' into text field 'id=Password'.</msg>
+<arg>id=Password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-06T00:53:31.696650" elapsed="1.643627"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:53:33.341394" level="INFO">Clicking button 'css=input[value="Log in"]'.</msg>
+<arg>css=input[value="Log in"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-06T00:53:33.340842" elapsed="2.096157"/>
+</kw>
+<arg>${VALID_EMAIL}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<status status="PASS" start="2025-09-06T00:53:27.821722" elapsed="7.615638"/>
+</kw>
+<kw name="Logout" owner="keywords">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:53:35.440195" level="INFO">Clicking link 'Log out'.</msg>
+<msg time="2025-09-06T00:53:37.130751" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-06T00:53:37.131355" level="FAIL">Link with locator 'Log out' not found.</msg>
+<arg>Log out</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="FAIL" start="2025-09-06T00:53:35.439672" elapsed="1.701159">Link with locator 'Log out' not found.</status>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Register</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-09-06T00:53:37.143646" elapsed="0.000162"/>
+</kw>
+<status status="FAIL" start="2025-09-06T00:53:35.438572" elapsed="1.705798">Link with locator 'Log out' not found.</status>
+</kw>
+<status status="FAIL" start="2025-09-06T00:53:27.817904" elapsed="9.327444">Link with locator 'Log out' not found.</status>
+</test>
+<test id="s1-t9" name="TC009 Search Product" line="49">
+<kw name="Search Product" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:53:37.150411" level="INFO">Typing text 'Books' into text field 'id=small-searchterms'.</msg>
+<arg>id=small-searchterms</arg>
+<arg>${product_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-06T00:53:37.149728" elapsed="1.722054"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:53:38.872940" level="INFO">Clicking button 'css=input[value="Search"]'.</msg>
+<arg>css=input[value="Search"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-06T00:53:38.872359" elapsed="1.603749"/>
+</kw>
+<arg>${SEARCH_PRODUCT}</arg>
+<status status="PASS" start="2025-09-06T00:53:37.148860" elapsed="3.328018"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:53:41.742438" level="INFO">Current page contains text 'Books'.</msg>
+<arg>${SEARCH_PRODUCT}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-09-06T00:53:40.477547" elapsed="1.265243"/>
+</kw>
+<status status="PASS" start="2025-09-06T00:53:37.147620" elapsed="4.596912"/>
+</test>
+<test id="s1-t10" name="TC010 View Product Details" line="53">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-09-06T00:53:41.749955" level="INFO">Clicking link 'Computing and Internet'.</msg>
+<msg time="2025-09-06T00:53:43.414727" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-06T00:53:43.415189" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=140.0.7339.81); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff68445fca5+79861]
+	GetHandleVerifier [0x0x7ff68445fd00+79952]
+	(No symbol) [0x0x7ff6841dc8fc]
+	(No symbol) [0x0x7ff6842359c3]
+	(No symbol) [0x0x7ff684227338]
+	(No symbol) [0x0x7ff68425cada]
+	(No symbol) [0x0x7ff684226bc6]
+	(No symbol) [0x0x7ff68425ccf0]
+	(No symbol) [0x0x7ff684284f8b]
+	(No symbol) [0x0x7ff68425c8b3]
+	(No symbol) [0x0x7ff684225272]
+	(No symbol) [0x0x7ff684226043]
+	GetHandleVerifier [0x0x7ff68471b9dd+2946349]
+	GetHandleVerifier [0x0x7ff684715c5a+2922410]
+	GetHandleVerifier [0x0x7ff6847359e7+3052855]
+	GetHandleVerifier [0x0x7ff68447aa8e+189918]
+	GetHandleVerifier [0x0x7ff684482a2f+222591]
+	GetHandleVerifier [0x0x7ff684468ac4+116244]
+	GetHandleVerifier [0x0x7ff684468c79+116681]
+	GetHandleVerifier [0x0x7ff68444f058+11176]
+	BaseThreadInitThunk [0x0x7ffabeffe8d7+23]
+	RtlUserThreadStart [0x0x7ffac02e8d9c+44]
+</msg>
+<arg>${PRODUCT_NAME}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="FAIL" start="2025-09-06T00:53:41.748867" elapsed="1.672996">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=140.0.7339.81); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff68445fca5+79861]
+	GetHandleVerifier [0x0x7ff68445fd00+79952]
+	(No symbol) [0x0x7ff6841dc8fc]
+	(No symbol) [0x0x7ff6842359c3]
+	(No symbol) [0x0x7ff684227338]
+	(No symbol) [0x0x7ff68425cada]
+	(No symbol) [0x0x7ff684226bc6]
+	(No symbol) [0x0x7ff68425ccf0]
+	(No symbol) [0x0x7ff684284f8b]
+	(No symbol) [0x0x7ff68425c8b3]
+	(No symbol) [0x0x7ff684225272]
+	(No symbol) [0x0x7ff684226043]
+	GetHandleVerifier [0x0x7ff68471b9dd+2946349]
+	GetHandleVerifier [0x0x7ff684715c5a+2922410]
+	GetHandleVerifier [0x0x7ff6847359e7+3052855]
+	GetHandleVerifier [0x0x7ff68447aa8e+189918]
+	GetHandleVerifier [0x0x7ff684482a2f+222591]
+	GetHandleVerifier [0x0x7ff684468ac4+116244]
+	GetHandleVerifier [0x0x7ff684468c79+116681]
+	GetHandleVerifier [0x0x7ff68444f058+11176]
+	BaseThreadInitThunk [0x0x7ffabeffe8d7+23]
+	RtlUserThreadStart [0x0x7ffac02e8d9c+44]
+</status>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>${PRODUCT_NAME}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-09-06T00:53:43.423407" elapsed="0.000363"/>
+</kw>
+<status status="FAIL" start="2025-09-06T00:53:41.747105" elapsed="1.677698">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=140.0.7339.81); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff68445fca5+79861]
+	GetHandleVerifier [0x0x7ff68445fd00+79952]
+	(No symbol) [0x0x7ff6841dc8fc]
+	(No symbol) [0x0x7ff6842359c3]
+	(No symbol) [0x0x7ff684227338]
+	(No symbol) [0x0x7ff68425cada]
+	(No symbol) [0x0x7ff684226bc6]
+	(No symbol) [0x0x7ff68425ccf0]
+	(No symbol) [0x0x7ff684284f8b]
+	(No symbol) [0x0x7ff68425c8b3]
+	(No symbol) [0x0x7ff684225272]
+	(No symbol) [0x0x7ff684226043]
+	GetHandleVerifier [0x0x7ff68471b9dd+2946349]
+	GetHandleVerifier [0x0x7ff684715c5a+2922410]
+	GetHandleVerifier [0x0x7ff6847359e7+3052855]
+	GetHandleVerifier [0x0x7ff68447aa8e+189918]
+	GetHandleVerifier [0x0x7ff684482a2f+222591]
+	GetHandleVerifier [0x0x7ff684468ac4+116244]
+	GetHandleVerifier [0x0x7ff684468c79+116681]
+	GetHandleVerifier [0x0x7ff68444f058+11176]
+	BaseThreadInitThunk [0x0x7ffabeffe8d7+23]
+	RtlUserThreadStart [0x0x7ffac02e8d9c+44]
+</status>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-06T00:53:43.431276" elapsed="3.005775"/>
+</kw>
+<status status="FAIL" start="2025-09-06T00:52:46.470381" elapsed="59.967004"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="6" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Ecommerce Tests" id="s1" pass="4" fail="6" skip="0">Ecommerce Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
